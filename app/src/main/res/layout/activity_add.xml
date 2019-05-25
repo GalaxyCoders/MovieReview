@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".module.activity.AddActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <pl.utkala.searchablespinner.SearchableSpinner
+                android:id="@+id/searchSpn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:closeText="Close"
+                app:dialogTitle="Choose Movie" />
+
+            <ProgressBar
+                android:id="@+id/pbarSelectMovie"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/addRettingTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="3.5"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:maxLength="5"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/lessRattingBtn"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="#4b4b4b"
+                android:text="-"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/addRattingBtn"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="#3d3d3d"
+                android:text="+"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/addReviewET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:hint="What's your review?"
+            android:gravity="top"
+            android:maxLines="15"/>
+
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/addBtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:text="Share"-->
+        <!--android:textIsSelectable="true"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:background="@color/colorPrimary"/>-->
+
+    <ProgressBar
+        android:id="@+id/pbarAdd"
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
